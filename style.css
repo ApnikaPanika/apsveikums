@@ -1,0 +1,63 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    width: 100;
+    overflow: hidden;
+    background-image: url(fons.webp);
+    background-repeat: no-repeat;
+    background-position: center; /* Center the image */
+    background-size: cover; 
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.santa{
+    width: 300px;
+    animation-name: movingImage;
+    animation-duration: 7s;
+    position: relative;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes movingImage {
+    0% {
+        left: -60vw;
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: rotate(10deg);
+    }
+    20%,40%, 60%, 80% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        left: 60vw;
+    }
+}
+
+.presentContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 600px;
+    background-color: rgba(255,255,255,0.8);
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.present{
+    background-color: brown;
+    color: white;
+    padding: 50px 100px;
+    border-radius: 10px;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+}
